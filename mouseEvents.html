@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>New Learn</title>
+</head>
+<body>
+<h1>Mouse Events in JQuery</h1>
+<div id="box" class="test">
+	<h2> Box text </h2>
+	<p> Lorem ipsum some many things</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function() {
+		$("#box").css("border", "1px solid pink");
+		$("#box").css("background-color", "pink");
+
+		// click() event : works on single click
+		$("#box").click(function() {
+			$("#box").css("background-color", "red");
+		})
+
+		//dblclick() event : Works on double click
+		$("#box").dblclick(function() {
+			$("#box").css("background-color", "blue")
+		})
+
+		// contextmenu() event : works on right click
+		$("#box").contextmenu(function() {
+			$("#box").css("background-color", "orange")
+		})
+
+		// mouseenter() event : when we hover
+		$("#box").mouseenter(function() {
+			$("#box").css("background-color", "tan")
+		})
+
+		// mouseleave() event : when we leave hover
+		$("#box").mouseleave(function() {
+			$("#box").css("background-color", "purple")
+		})
+
+	});
+</script>
+</body>
+</html>
